@@ -1,0 +1,41 @@
+{% extends 'home/layouts/main.html' %}
+
+{% block title %}
+    Collections | ShopKart
+{% endblock title %}
+
+{% block content %}
+<section class="col-12 py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-12 col-md-8 mx-auto">
+            <h1 class="fw-light">Bestsellers</h1>
+            <p class="lead text-muted">Our most popular products based on sale. Updated hourly.</p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">Already a user</a>
+                <a href="{% url 'register' %}" class="btn btn-secondary my-2">Register</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-4">
+    <div class="container">
+        <h4 class="mb-3">Categories</h4>
+        <hr style="border-color: #b8bfc2">
+        <div class="row">
+            {% for item in categories %}
+            <div class="col-md-4 col-lg-3" style="display: flex; justify-content: space-between;">
+                <div class="card my-3">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="categories" style="max-height: 200px; width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
+                    </div>
+                    <a href="{% url 'Collections' item.name %}" class="stretched-link"></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

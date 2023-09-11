@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<footer class="bg-dark text-white py-3" style="margin-top: 400px">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h5>Contact Us</h5>
+        <p>Email: balachantran8@gmail.com</p>
+        <p>Phone: 8610711037</p>
+        <address>
+          123 Street Name<br>
+          City, State ZIP Code
+        </address>
+      </div>
+      <div class="col-lg-4">
+        <h5>Follow Us</h5>
+
+        <ul class="list-unstyled social-icons">
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/balachandran.py/"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/balachandran-s08/"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+        <style>
+  .list-unstyled.social-icons li a{
+
+    color: whitesmoke;
+    text-decoration: none;
+
+
+  }
+  .list-unstyled.social-icons li a:hover{
+
+    color: brown;
+    text-decoration: none;
+
+
+  }
+</style>
+
+      <div class="col-lg-4">
+        <h5>Newsletter</h5>
+        <p>Subscribe to our newsletter for updates:</p>
+        <form class="newsletter-form">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row" style="">
+      <div class="col-lg-6" style="display: flex ; justify-content: space-around ;  text-decoration: none;" >
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'Collections' %}">Products</a>
+          <a href="">About Us</a>
+          <a href="#">Contact Us</a>
+
+      </div>
+      <div class="col-lg-6">
+        <p class="text-center">&copy; 2023 ShopKart. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
